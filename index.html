@@ -520,7 +520,8 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+try {
+  firebase.initializeApp(firebaseConfig);
 } catch(e) {
   console.error('Firebase error:', e);
   alert('Firebase config not set. Please update firebaseConfig in the code.');
